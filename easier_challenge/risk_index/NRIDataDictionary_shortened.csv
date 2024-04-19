@@ -1,0 +1,115 @@
+Sort,Field Name,Field Alias,Type,Length,Relevant Layer,Metric Type,Version,Version Date
+1,OBJECTID,OBJECTID,Integer,4,n/a,n/a,1.19.0,Mar-23
+2,Shape,Shape,Geometry,n/a,n/a,n/a,1.19.0,Mar-23
+3,Shape_Length,Shape_Length,Double,8,n/a,n/a,1.19.0,Mar-23
+4,Shape_Area,Shape_Area,Double,8,n/a,n/a,1.19.0,Mar-23
+5,STATE,State Name,String,250,All,n/a,1.19.0,Mar-23
+6,STATEABBRV,State Name Abbreviation,String,20,All,n/a,1.19.0,Mar-23
+7,STATEFIPS,State FIPS Code,String,20,All,n/a,1.19.0,Mar-23
+8,COUNTY,County Name,String,250,All,n/a,1.19.0,Mar-23
+9,COUNTYTYPE,County Type,String,250,All,n/a,1.19.0,Mar-23
+10,COUNTYFIPS,County FIPS Code,String,20,All,n/a,1.19.0,Mar-23
+11,STCOFIPS,State-County FIPS Code,String,20,All,n/a,1.19.0,Mar-23
+12,TRACT,Census Tract,String,20,All,n/a,1.19.0,Mar-23
+13,TRACTFIPS,Census Tract FIPS Code,String,20,All,n/a,1.19.0,Mar-23
+14,NRI_ID,National Risk Index ID,String,20,All,n/a,1.19.0,Mar-23
+15,POPULATION,Population (2020),Integer,4,All,n/a,1.19.0,Mar-23
+16,BUILDVALUE,Building Value ($),Double,8,All,n/a,1.19.0,Mar-23
+17,AGRIVALUE,Agriculture Value ($),Double,8,All,n/a,1.19.0,Mar-23
+18,AREA,Area (sq mi),Double,8,All,n/a,1.19.0,Mar-23
+19,RISK_VALUE,National Risk Index - Value - Composite,Double,8,National Risk Index,Value,1.19.0,Mar-23
+20,RISK_SCORE,National Risk Index - Score - Composite,Double,8,National Risk Index,Score,1.19.0,Mar-23
+21,RISK_RATNG,National Risk Index - Rating - Composite,String,50,National Risk Index,Rating,1.19.0,Mar-23
+22,RISK_SPCTL,National Risk Index - State Percentile - Composite,Double,8,National Risk Index,State Percentile,1.19.0,Mar-23
+23,EAL_SCORE,Expected Annual Loss - Score - Composite,Double,8,Expected Annual Loss,Score,1.19.0,Mar-23
+24,EAL_RATNG,Expected Annual Loss - Rating - Composite,String,50,Expected Annual Loss,Rating,1.19.0,Mar-23
+25,EAL_SPCTL,Expected Annual Loss - State Percentile - Composite,Double,8,Expected Annual Loss,State Percentile,1.19.0,Mar-23
+26,EAL_VALT,Expected Annual Loss - Total - Composite,Double,8,Expected Annual Loss,Value,1.19.0,Mar-23
+27,EAL_VALB,Expected Annual Loss - Building Value - Composite,Double,8,Expected Annual Loss,Value,1.19.0,Mar-23
+28,EAL_VALP,Expected Annual Loss - Population - Composite,Double,8,Expected Annual Loss,Value,1.19.0,Mar-23
+29,EAL_VALPE,Expected Annual Loss - Population Equivalence - Composite,Double,8,Expected Annual Loss,Value,1.19.0,Mar-23
+30,EAL_VALA,Expected Annual Loss - Agriculture Value - Composite,Double,8,Expected Annual Loss,Value,1.19.0,Mar-23
+31,ALR_VALB,Expected Annual Loss Rate - Building - Composite,Double,8,Expected Annual Loss Rate,Value,1.19.0,Mar-23
+32,ALR_VALP,Expected Annual Loss Rate - Population - Composite,Double,8,Expected Annual Loss Rate,Value,1.19.0,Mar-23
+33,ALR_VALA,Expected Annual Loss Rate - Agriculture - Composite,Double,8,Expected Annual Loss Rate,Value,1.19.0,Mar-23
+34,ALR_NPCTL,Expected Annual Loss Rate - National Percentile - Composite,Double,8,Expected Annual Loss Rate,National Percentile,1.19.0,Mar-23
+35,ALR_VRA_NPCTL,Social Vulnerability and Community Resilience Adjusted Expected Annual Loss Rate - National Percentile - Composite,Double,8,Social Vulnerability and Community Resilience Adjusted Expected Annual Loss Rate,National Percentile,1.19.0,Mar-23
+36,SOVI_SCORE,Social Vulnerability - Score,Double,8,Social Vulnerability,Score,1.19.0,Mar-23
+37,SOVI_RATNG,Social Vulnerability - Rating,String,50,Social Vulnerability,Rating,1.19.0,Mar-23
+38,SOVI_SPCTL,Social Vulnerability - State Percentile,Double,8,Social Vulnerability,State Percentile,1.19.0,Mar-23
+39,RESL_SCORE,Community Resilience - Score,Double,8,Community Resilience,Score,1.19.0,Mar-23
+40,RESL_RATNG,Community Resilience - Rating,String,50,Community Resilience,Rating,1.19.0,Mar-23
+41,RESL_SPCTL,Community Resilience - State Percentile,Double,8,Community Resilience,State Percentile,1.19.0,Mar-23
+42,RESL_VALUE,Community Resilience - Value,Double,8,Community Resilience,Value,1.19.0,Mar-23
+43,CRF_VALUE,Community Risk Factor - Value,Double,8,Community Risk Factor,Value,1.19.0,Mar-23
+66,CFLD_EVNTS,Coastal Flooding - Number of Events,Double,8,Coastal Flooding,Number of Events,1.19.0,Mar-23
+67,CFLD_AFREQ,Coastal Flooding - Annualized Frequency,Double,8,Coastal Flooding,Annualized Frequency,1.19.0,Mar-23
+68,CFLD_EXPB,Coastal Flooding - Exposure - Building Value,Double,8,Coastal Flooding,Exposure - Building Value,1.19.0,Mar-23
+69,CFLD_EXPP,Coastal Flooding - Exposure - Population,Double,8,Coastal Flooding,Exposure - Population,1.19.0,Mar-23
+70,CFLD_EXPPE,Coastal Flooding - Exposure - Population Equivalence,Double,8,Coastal Flooding,Exposure - Population Equivalence,1.19.0,Mar-23
+71,CFLD_EXPT,Coastal Flooding - Exposure - Total,Double,8,Coastal Flooding,Exposure - Total,1.19.0,Mar-23
+72,CFLD_EXP_AREA,Coastal Flooding - Exposure - Impacted Area (sq mi),Double,8,Coastal Flooding,Exposure - Area,1.19.0,Mar-23
+73,CFLD_HLRB,Coastal Flooding - Historic Loss Ratio - Buildings,Double,8,Coastal Flooding,Historic Loss Ratio - Buildings,1.19.0,Mar-23
+74,CFLD_HLRP,Coastal Flooding - Historic Loss Ratio - Population,Double,8,Coastal Flooding,Historic Loss Ratio - Population,1.19.0,Mar-23
+75,CFLD_HLRR,Coastal Flooding - Historic Loss Ratio - Total Rating,String,50,Coastal Flooding,Historic Loss Ratio - Total Rating,1.19.0,Mar-23
+76,CFLD_EALB,Coastal Flooding - Expected Annual Loss - Building Value,Double,8,Coastal Flooding,Expected Annual Loss - Building Value,1.19.0,Mar-23
+77,CFLD_EALP,Coastal Flooding - Expected Annual Loss - Population,Double,8,Coastal Flooding,Expected Annual Loss - Population,1.19.0,Mar-23
+78,CFLD_EALPE,Coastal Flooding - Expected Annual Loss - Population Equivalence,Double,8,Coastal Flooding,Expected Annual Loss - Population Equivalence,1.19.0,Mar-23
+79,CFLD_EALT,Coastal Flooding - Expected Annual Loss - Total,Double,8,Coastal Flooding,Expected Annual Loss - Total,1.19.0,Mar-23
+80,CFLD_EALS,Coastal Flooding - Expected Annual Loss Score,Double,8,Coastal Flooding,Expected Annual Loss Score,1.19.0,Mar-23
+81,CFLD_EALR,Coastal Flooding - Expected Annual Loss Rating,String,50,Coastal Flooding,Expected Annual Loss Rating,1.19.0,Mar-23
+82,CFLD_ALRB,Coastal Flooding - Expected Annual Loss Rate - Building,Double,8,Coastal Flooding,Expected Annual Loss Rate - Building,1.19.0,Mar-23
+83,CFLD_ALRP,Coastal Flooding - Expected Annual Loss Rate - Population,Double,8,Coastal Flooding,Expected Annual Loss Rate - Population,1.19.0,Mar-23
+84,CFLD_ALR_NPCTL,Coastal Flooding - Expected Annual Loss Rate - National Percentile,Double,8,Coastal Flooding,National Percentile,1.19.0,Mar-23
+85,CFLD_RISKV,Coastal Flooding - Hazard Type Risk Index Value,Double,8,Coastal Flooding,Hazard Type Risk Index Value,1.19.0,Mar-23
+86,CFLD_RISKS,Coastal Flooding - Hazard Type Risk Index Score,Double,8,Coastal Flooding,Hazard Type Risk Index Score,1.19.0,Mar-23
+87,CFLD_RISKR,Coastal Flooding - Hazard Type Risk Index Rating,String,50,Coastal Flooding,Hazard Type Risk Index Rating,1.19.0,Mar-23
+204,HRCN_EVNTS,Hurricane - Number of Events,Double,8,Hurricane,Number of Events,1.19.0,Mar-23
+205,HRCN_AFREQ,Hurricane - Annualized Frequency,Double,8,Hurricane,Annualized Frequency,1.19.0,Mar-23
+206,HRCN_EXPB,Hurricane - Exposure - Building Value,Double,8,Hurricane,Exposure - Building Value,1.19.0,Mar-23
+207,HRCN_EXPP,Hurricane - Exposure - Population,Double,8,Hurricane,Exposure - Population,1.19.0,Mar-23
+208,HRCN_EXPPE,Hurricane - Exposure - Population Equivalence,Double,8,Hurricane,Exposure - Population Equivalence,1.19.0,Mar-23
+209,HRCN_EXPA,Hurricane - Exposure - Agriculture Value,Double,8,Hurricane,Exposure - Agriculture Value,1.19.0,Mar-23
+210,HRCN_EXPT,Hurricane - Exposure - Total,Double,8,Hurricane,Exposure - Total,1.19.0,Mar-23
+211,HRCN_EXP_AREA,Hurricane - Exposure - Impacted Area (sq mi),Double,8,Hurricane,Exposure - Area,1.19.0,Mar-23
+212,HRCN_HLRB,Hurricane - Historic Loss Ratio - Buildings,Double,8,Hurricane,Historic Loss Ratio - Buildings,1.19.0,Mar-23
+213,HRCN_HLRP,Hurricane - Historic Loss Ratio - Population,Double,8,Hurricane,Historic Loss Ratio - Population,1.19.0,Mar-23
+214,HRCN_HLRA,Hurricane - Historic Loss Ratio - Agriculture,Double,8,Hurricane,Historic Loss Ratio - Agriculture,1.19.0,Mar-23
+215,HRCN_HLRR,Hurricane - Historic Loss Ratio - Total Rating,String,50,Hurricane,Historic Loss Ratio - Total Rating,1.19.0,Mar-23
+216,HRCN_EALB,Hurricane - Expected Annual Loss - Building Value,Double,8,Hurricane,Expected Annual Loss - Building Value,1.19.0,Mar-23
+217,HRCN_EALP,Hurricane - Expected Annual Loss - Population,Double,8,Hurricane,Expected Annual Loss - Population,1.19.0,Mar-23
+218,HRCN_EALPE,Hurricane - Expected Annual Loss - Population Equivalence,Double,8,Hurricane,Expected Annual Loss - Population Equivalence,1.19.0,Mar-23
+219,HRCN_EALA,Hurricane - Expected Annual Loss - Agriculture Value,Double,8,Hurricane,Expected Annual Loss - Agriculture Value,1.19.0,Mar-23
+220,HRCN_EALT,Hurricane - Expected Annual Loss - Total,Double,8,Hurricane,Expected Annual Loss - Total,1.19.0,Mar-23
+221,HRCN_EALS,Hurricane - Expected Annual Loss Score,Double,8,Hurricane,Expected Annual Loss Score,1.19.0,Mar-23
+222,HRCN_EALR,Hurricane - Expected Annual Loss Rating,String,50,Hurricane,Expected Annual Loss Rating,1.19.0,Mar-23
+223,HRCN_ALRB,Hurricane - Expected Annual Loss Rate - Building,Double,8,Hurricane,Expected Annual Loss Rate - Building,1.19.0,Mar-23
+224,HRCN_ALRP,Hurricane - Expected Annual Loss Rate - Population,Double,8,Hurricane,Expected Annual Loss Rate - Population,1.19.0,Mar-23
+225,HRCN_ALRA,Hurricane - Expected Annual Loss Rate - Agriculture,Double,8,Hurricane,Expected Annual Loss Rate - Agriculture,1.19.0,Mar-23
+226,HRCN_ALR_NPCTL,Hurricane - Expected Annual Loss Rate - National Percentile,Double,8,Hurricane,National Percentile,1.19.0,Mar-23
+227,HRCN_RISKV,Hurricane - Hazard Type Risk Index Value,Double,8,Hurricane,Hazard Type Risk Index Value,1.19.0,Mar-23
+228,HRCN_RISKS,Hurricane - Hazard Type Risk Index Score,Double,8,Hurricane,Hazard Type Risk Index Score,1.19.0,Mar-23
+229,HRCN_RISKR,Hurricane - Hazard Type Risk Index Rating,String,50,Hurricane,Hazard Type Risk Index Rating,1.19.0,Mar-23
+374,TSUN_EVNTS,Tsunami - Number of Events,Double,8,Tsunami,Number of Events,1.19.0,Mar-23
+375,TSUN_AFREQ,Tsunami - Annualized Frequency,Double,8,Tsunami,Annualized Frequency,1.19.0,Mar-23
+376,TSUN_EXPB,Tsunami - Exposure - Building Value,Double,8,Tsunami,Exposure - Building Value,1.19.0,Mar-23
+377,TSUN_EXPP,Tsunami - Exposure - Population,Double,8,Tsunami,Exposure - Population,1.19.0,Mar-23
+378,TSUN_EXPPE,Tsunami - Exposure - Population Equivalence,Double,8,Tsunami,Exposure - Population Equivalence,1.19.0,Mar-23
+379,TSUN_EXPT,Tsunami - Exposure - Total,Double,8,Tsunami,Exposure - Total,1.19.0,Mar-23
+380,TSUN_EXP_AREA,Tsunami - Exposure - Impacted Area (sq mi),Double,8,Tsunami,Exposure - Area,1.19.0,Mar-23
+381,TSUN_HLRB,Tsunami - Historic Loss Ratio - Buildings,Double,8,Tsunami,Historic Loss Ratio - Buildings,1.19.0,Mar-23
+382,TSUN_HLRP,Tsunami - Historic Loss Ratio - Population,Double,8,Tsunami,Historic Loss Ratio - Population,1.19.0,Mar-23
+383,TSUN_HLRR,Tsunami - Historic Loss Ratio - Total Rating,String,50,Tsunami,Historic Loss Ratio - Total Rating,1.19.0,Mar-23
+384,TSUN_EALB,Tsunami - Expected Annual Loss - Building Value,Double,8,Tsunami,Expected Annual Loss - Building Value,1.19.0,Mar-23
+385,TSUN_EALP,Tsunami - Expected Annual Loss - Population,Double,8,Tsunami,Expected Annual Loss - Population,1.19.0,Mar-23
+386,TSUN_EALPE,Tsunami - Expected Annual Loss - Population Equivalence,Double,8,Tsunami,Expected Annual Loss - Population Equivalence,1.19.0,Mar-23
+387,TSUN_EALT,Tsunami - Expected Annual Loss - Total,Double,8,Tsunami,Expected Annual Loss - Total,1.19.0,Mar-23
+388,TSUN_EALS,Tsunami - Expected Annual Loss Score,Double,8,Tsunami,Expected Annual Loss Score,1.19.0,Mar-23
+389,TSUN_EALR,Tsunami - Expected Annual Loss Rating,String,50,Tsunami,Expected Annual Loss Rating,1.19.0,Mar-23
+390,TSUN_ALRB,Tsunami - Expected Annual Loss Rate - Building,Double,8,Tsunami,Expected Annual Loss Rate - Building,1.19.0,Mar-23
+391,TSUN_ALRP,Tsunami - Expected Annual Loss Rate - Population,Double,8,Tsunami,Expected Annual Loss Rate - Population,1.19.0,Mar-23
+392,TSUN_ALR_NPCTL,Tsunami - Expected Annual Loss Rate - National Percentile,Double,8,Tsunami,National Percentile,1.19.0,Mar-23
+393,TSUN_RISKV,Tsunami - Hazard Type Risk Index Value,Double,8,Tsunami,Hazard Type Risk Index Value,1.19.0,Mar-23
+394,TSUN_RISKS,Tsunami - Hazard Type Risk Index Score,Double,8,Tsunami,Hazard Type Risk Index Score,1.19.0,Mar-23
+395,TSUN_RISKR,Tsunami - Hazard Type Risk Index Rating,String,50,Tsunami,Hazard Type Risk Index Rating,1.19.0,Mar-23
+470,NRI_VER,National Risk Index Version,String,50,All,n/a,1.19.0,Mar-23

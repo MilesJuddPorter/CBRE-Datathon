@@ -1,0 +1,9 @@
+{
+    "Geographic Area Name": "geography",
+    "Estimate!!Number!!FAMILIES!!Families": "geographic_area_name",
+    "Margin of Error!!Number!!FAMILIES!!Families": "families_number",
+    "Estimate!!Percent Distribution!!FAMILIES!!Families": "families_number_moe",
+    "Margin of Error!!Percent Distribution!!FAMILIES!!Families": "families_percent_distribution",
+    "Estimate!!Median income (dollars)!!FAMILIES!!Families": "families_percent_distribution_moe",
+    "Margin of Error!!Median income (dollars)!!FAMILIES!!Families": "families_median_income"
+}

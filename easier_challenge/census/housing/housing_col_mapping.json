@@ -1,0 +1,13 @@
+{
+    "Geographic Area Name": "geography",
+    "Estimate!!HOUSING OCCUPANCY!!Total housing units": "geographic_area_name",
+    "Margin of Error!!HOUSING OCCUPANCY!!Total housing units": "total_housing_units",
+    "Estimate!!HOUSING OCCUPANCY!!Total housing units!!Occupied housing units": "total_housing_units_moe",
+    "Margin of Error!!HOUSING OCCUPANCY!!Total housing units!!Occupied housing units": "occupied_housing_units",
+    "Estimate!!HOUSING OCCUPANCY!!Total housing units!!Vacant housing units": "occupied_housing_units_moe",
+    "Margin of Error!!HOUSING OCCUPANCY!!Total housing units!!Vacant housing units": "vacant_housing_units",
+    "Estimate!!HOUSING OCCUPANCY!!Total housing units!!Homeowner vacancy rate": "vacant_housing_units_moe",
+    "Margin of Error!!HOUSING OCCUPANCY!!Total housing units!!Homeowner vacancy rate": "homeowner_vacancy_rate",
+    "Estimate!!HOUSING OCCUPANCY!!Total housing units!!Rental vacancy rate": "homeowner_vacancy_rate_moe",
+    "Margin of Error!!HOUSING OCCUPANCY!!Total housing units!!Rental vacancy rate": "rental_vacancy_rate"
+}
