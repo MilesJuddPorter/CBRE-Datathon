@@ -47,7 +47,7 @@ class Satellite:
     def bing_metadata(self, coords,
                     imagerySet="BirdseyeV2",
                     orientation=0,
-                    zoomLevel=10):
+                    zoomLevel=None):
         """
         Gets metadata information before making image request
         
@@ -59,8 +59,8 @@ class Satellite:
             Image Set from Bing API (default is BirdseyeV2)
         orientation : str, optional
             Not currently used in imagery (Inactive)
-        zoomLevel : str, optional
-            Not used so as to give back information to request zoomLevel on image
+        zoomLevel : int, optional
+            zoomLevel for metadata (default is None)
 
         Returns
         -------
@@ -69,7 +69,10 @@ class Satellite:
         """
 
         try:
-            URL = f"https://dev.virtualearth.net/REST/v1/Imagery/BasicMetadata/{imagerySet}/{coords}?&key={self.BING_API_KEY}"
+            if zoomLevel:
+                URL = f"https://dev.virtualearth.net/REST/v1/Imagery/BasicMetadata/{imagerySet}/{coords}?&zoomLevel={zoomLevel}&key={self.BING_API_KEY}"
+            else:
+                URL = f"https://dev.virtualearth.net/REST/v1/Imagery/BasicMetadata/{imagerySet}/{coords}?&key={self.BING_API_KEY}"
             resp = requests.get(URL)
             data = resp.json()
 
@@ -112,7 +115,7 @@ class Satellite:
             print(f"Error on image call: {str(e)}")
             return resp
 
-    def bing_pipeline(self, address, imagerySet):
+    def bing_pipeline(self, address, imagerySet, zoomLevel=None):
         """
         Creates a pipeline for processing Bing image
 
@@ -139,18 +142,18 @@ class Satellite:
             raise Exception(f"Could not find coords for address: {address}")
         
         # Get metadata
-        metadata = self.bing_metadata(coords, imagerySet=imagerySet)
+        metadata = self.bing_metadata(coords, imagerySet=imagerySet, zoomLevel=zoomLevel)
         if not metadata:
             raise Exception(f"Could not find Metadata for coords: {coords}")
         elif metadata.get("statusCode", 400) == 400:
-            raise Exception(f"Received a 400 status code given: {coords}\n\nFull Response: {metadata}")
+            raise Exception(f"[ERROR] - Metadata request\nReceived a 400 status code given: {coords}\n\nFull Response: {metadata}")
         
         print(f"METADATA: {metadata}")
+
         # Get Image
-        zoomMax = metadata['resourceSets'][0]['resources'][0]['zoomMax']
-        zoomMin = metadata['resourceSets'][0]['resources'][0]['zoomMin']
+        if not zoomLevel:
+            zoomLevel = (metadata['resourceSets'][0]['resources'][0]['zoomMax'] + metadata['resourceSets'][0]['resources'][0]['zoomMin']) // 2
 
-        imageMax = self.bing_imagery(coords, imagerySet=imagerySet, zoomLevel=zoomMax)
-        imageMin = self.bing_imagery(coords, imagerySet=imagerySet, zoomLevel=zoomMin)
+        image = self.bing_imagery(coords, imagerySet=imagerySet, zoomLevel=zoomLevel)
 
-        return imageMax, imageMin, metadata
+        return image, metadata
