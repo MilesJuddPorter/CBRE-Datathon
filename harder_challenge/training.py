@@ -13,8 +13,8 @@ image_df = image_df[image_df['image_file'].apply(os.path.isfile)]
 image_df['label'] = image_df['label'].apply(int).apply(str)
 
 pid_train, pid_test = train_test_split(image_df['propertyID'].unique(), train_size=0.8, test_size=0.2, shuffle=True)
-train = data[data['propertyID'].isin(pid_train)]
-test = data[data['propertyID'].isin(pid_test)]
+train = image_df[image_df['propertyID'].isin(pid_train)]
+test = image_df[image_df['propertyID'].isin(pid_test)]
 
 
 train_datagen = ImageDataGenerator(
