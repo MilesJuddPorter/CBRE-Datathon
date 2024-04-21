@@ -1,18 +1,22 @@
+import os
 import pandas as pd
 import tensorflow as tf
 from tensorflow.keras.applications import ResNet50
+from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.optimizers import Adam
+
 
 
 image_df = pd.read_csv("image_df.csv")
 image_df = image_df[image_df['image_file'].apply(os.path.isfile)]
 image_df['label'] = image_df['label'].apply(int).apply(str)
 
+pid_train, pid_test = train_test_split(image_df['propertyID'].unique(), train_size=0.8, test_size=0.2, shuffle=True)
+train = data[data['propertyID'].isin(pid_train)]
+test = data[data['propertyID'].isin(pid_test)]
 
 
-
-# Preprocess the data
 train_datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2,
@@ -25,7 +29,7 @@ train_datagen = ImageDataGenerator(
 )
 
 train_generator = train_datagen.flow_from_dataframe(
-    dataframe=image_df,
+    dataframe=train,
     x_col='image_file',
     y_col='label',
     target_size=(224, 224),
@@ -35,7 +39,7 @@ train_generator = train_datagen.flow_from_dataframe(
 )
 
 val_generator = train_datagen.flow_from_dataframe(
-    dataframe=image_df,
+    dataframe=train,
     x_col='image_file',
     y_col='label',
     target_size=(224, 224),
@@ -44,10 +48,8 @@ val_generator = train_datagen.flow_from_dataframe(
     subset='validation'
 )
 
-# Load the pre-trained model
 base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
-# Add a new classification layer
 x = base_model.output
 x = tf.keras.layers.GlobalAveragePooling2D()(x)
 x = tf.keras.layers.Dense(128, activation='relu')(x)
@@ -55,14 +57,11 @@ x = tf.keras.layers.Dropout(0.2)(x)
 x = tf.keras.layers.Dense(5, activation='softmax')(x)
 model = tf.keras.Model(inputs=base_model.input, outputs=x)
 
-# Freeze the layers of the pre-trained model
 for layer in base_model.layers:
     layer.trainable = False
 
-# Compile the model
 model.compile(optimizer=Adam(lr=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model
 epochs = 10
 history = model.fit(
     train_generator,
@@ -72,10 +71,10 @@ history = model.fit(
     epochs=epochs
 )
 
-# Evaluate the model
+
 loss, accuracy = model.evaluate(val_generator)
 print(f'Validation loss: {loss:.4f}')
 print(f'Validation accuracy: {accuracy:.4f}')
 
-# Save the fine-tuned model
+
 model.save('fine_tuned_model.h5')
